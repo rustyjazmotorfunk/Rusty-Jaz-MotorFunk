@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RJMF Music testing page</title>
+<meta name="robots" content="noindex" />
+</head>
+<script type="text/javascript">
+
+</script>
+
+<body>
+<input type="button" id="btnPause" name="btnPause" onclick="PausePlay()" value="Play" />
+<input type="button" id="btnChange" name="btnChange" onclick="ChangeSong()" value="Change" />
+<script type="text/javascript">
+const headers = {
+  'Accept':'application/json',
+  'Accept':'audio/mpeg',
+  'Accept':'text/plaintext'
+};
+var fetchError = 'false';
+var audiusHost = 'https://discoveryprovider.audius.co';
+var track = 'VK909';
+var audiusSrc = '';
+var tr = '';
+async function getMusic() {
+	const sample = (arr) => arr[Math.floor(Math.random() * arr.length)]
+	const host = await fetch('https://api.audius.co')
+	.then(r => r.json())
+	.then(j => j.data)
+	.then(d => sample(d));
+	console.log('Audius API Host : ', host);
+	audiusHost = host;
+	
+  // Test API server, if error 500, fallback to default host	
+  await fetch(audiusHost+'/v1/users/aAZNj/tracks?app_name=RJMF')  
+  .then(function(response) {                      // first then()
+      if(response.ok){
+		  tr = response.json().data;
+	  }
+	  throw new Error('Something went wrong.');
+  })  
+  .then(function(text) {                          // second then()
+    //console.log('Request successful', text);  
+	console.log('Request successful');
+  })  
+  .catch(function(error) {                        // catch
+    console.log('Request failed', error);
+	fetchError = "true";
+	audiusHost = 'https://discoveryprovider.audius.co';
+	console.log('Fallback to ', audiusHost)
+  });
+	
+	const sample2 = (arr) => arr[Math.floor(Math.random() * arr.length)]
+	tr = await fetch(audiusHost+'/v1/users/aAZNj/tracks?app_name=RJMF')
+	.then(r => r.json())
+	.then(j => j.data);
+	//console.log(tr);
+	track = tr;
+	track = sample2(tr).id;
+	//console.log(track);
+	
+	const audiusSrcF = await fetch(audiusHost+'/v1/tracks/'+track+'/stream?app_name=RJMF')
+	.then(r => r.url);
+	audiusSrc = audiusSrcF
+	//console.log(audiusSrc);
+	src.src = audiusSrc;
+	src.id = audiusSrc;
+	soundFile.appendChild(src);
+}
+getMusic();
+
+	//Create the audio tag
+	soundFile = document.createElement("audio");
+	soundFile.preload = "auto";
+
+	//Load the sound file (using a source element for expandability)
+	src = document.createElement("source");
+	
+	//console.log(audiusSrc);
+	
+	src.src = audiusSrc;
+	src.id = "audiusSrc";
+	soundFile.appendChild(src);
+
+	//Load the audio tag
+	//It auto plays as a fallback
+	soundFile.load();
+	//soundFile.volume = 0.000000;
+	//soundFile.play();
+	
+	//Plays the sound
+	function play() {
+   		//Set the current time for the audio file to the beginning
+   		soundFile.currentTime = 0.01;
+   		soundFile.volume = volume;
+
+   		//Due to a bug in Firefox, the audio needs to be played after a delay
+   		setTimeout(function(){soundFile.play();},1);
+   	}
+   
+   	btn = document.getElementById("btnPause");
+
+    function PausePlay() {
+            if (soundFile.paused) {
+                soundFile.play();
+                btn.value = "Pause";
+            } else if (soundFile.ended) {
+                soundFile.currentTime = 0;
+                soundFile.play();
+                btn.value = "Pause";
+            }
+            else {
+                soundFile.pause();
+                btn.value = "Play";
+            }
+     }
+	 function PlayOnly() {
+     	if (soundFile.paused) {
+     		soundFile.play();
+     		btn.value = "Pause";
+     	} else if (soundFile.ended) {
+     		soundFile.currentTime = 0;
+      		soundFile.play();
+      		btn.value = "Pause";
+        }
+      }
+		function PauseOnly() {
+            soundFile.pause();
+            btn.value = "Play";
+        }
+	 
+	 async function ChangeSong() {
+		const sample2 = (arr) => arr[Math.floor(Math.random() * arr.length)]
+		track = sample2(tr).id;
+		//console.log(track);
+		await fetch(audiusHost+'/v1/tracks/'+track+'/stream?app_name=RJMF')  
+  		.then(function(response) {                      // first then()
+      		if(response.ok){
+				audiusSrc = response.url;
+				console.log("New song : ", audiusSrc);
+				src.src = audiusSrc;
+				src.id = audiusSrc;
+				soundFile.appendChild(src);
+				soundFile.pause();
+				soundFile.load()
+			;}
+  		}) 
+		soundFile.play();
+     	btn.value = "Pause";
+	 }
+
+</script>
+</body>
+</html>

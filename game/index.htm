@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"/>
+<meta name="Cache-Control" content="no-store" />
+
+<!-- PWA & Mobile Apps -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RJMF Tennis">
+<meta name="mobile-web-app-title" content="RJMF Tennis">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Balises SEO -->
+<title>RJMF Tennis | Le Jeu Officiel de Rusty Jaz MotorFunk</title>
+<meta name="description" content="Jouez à RJMF Tennis, le jeu rétro officiel du groupe Rusty Jaz MotorFunk. Defiez l'IA sur une bande-son funk-jazz originale envoyée directement depuis Audius.">
+<meta name="keywords" content="RJMF Tennis, jeu vidéo Rusty Jaz MotorFunk, funk game, jeu retro tennis, Audius music game">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rustyjazmotorfunk.com/game/">
+
+<!-- Balises Bilingues -->
+<link rel="alternate" hreflang="fr" href="https://rustyjazmotorfunk.com/game/" />
+<link rel="alternate" hreflang="en" href="https://rustyjazmotorfunk.com/game/" />
+<link rel="alternate" hreflang="x-default" href="https://rustyjazmotorfunk.com/game/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:url" content="https://rustyjazmotorfunk.com/game/" />
+<meta property="og:type" content="game" />
+<meta property="og:title" content="Rusty Jaz MotorFunk Tennis" />
+<meta property="og:description" content="Jouez à Rusty Jaz MotorFunk Tennis, le jeu rétro officiel du groupe !" />
+<meta property="og:image" content="https://rustyjazmotorfunk.com/game/rjmf_tennis_og.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="524" />
+<meta property="fb:app_id" content="118269441686" />
+<meta property="og:locale" content="fr_CA" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://rustyjazmotorfunk.com/game/" />
+<meta name="twitter:title" content="Rusty Jaz MotorFunk Tennis">
+<meta name="twitter:description" content="Jouez à Rusty Jaz MotorFunk Tennis, le jeu rétro officiel du groupe !">
+<meta name="twitter:image" content="https://rustyjazmotorfunk.com/game/rjmf_tennis_og.jpg" />
+
+<!-- Favicons & App Icons -->
+<link rel="apple-touch-icon" sizes="57x57" href="https://rustyjazmotorfunk.com/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://rustyjazmotorfunk.com/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://rustyjazmotorfunk.com/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://rustyjazmotorfunk.com/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://rustyjazmotorfunk.com/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://rustyjazmotorfunk.com/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://rustyjazmotorfunk.com/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://rustyjazmotorfunk.com/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://rustyjazmotorfunk.com/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://rustyjazmotorfunk.com/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://rustyjazmotorfunk.com/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://rustyjazmotorfunk.com/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://rustyjazmotorfunk.com/favicon-16x16.png">
+<link rel="manifest" href="https://rustyjazmotorfunk.com/game/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://rustyjazmotorfunk.com/ms-icon-144x144.png">
+
+<!-- Apple Splashscreens -->
+<link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+
+<!-- Données Structurées Schema.org pour Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "RJMF Tennis",
+  "description": "Jeu de tennis arcade rétro aux couleurs du groupe Rusty Jaz MotorFunk avec intégration musicale via Audius.",
+  "genre": ["Arcade", "Music", "Sports"],
+  "url": "https://rustyjazmotorfunk.com/game/",
+  "image": "https://rustyjazmotorfunk.com/game/rjmf_tennis_og.jpg",
+  "author": {
+    "@type": "MusicGroup",
+    "name": "Rusty Jaz MotorFunk",
+    "url": "https://rustyjazmotorfunk.com"
+  },
+  "gamePlatform": "Web Browser"
+}
+</script>
+
+<style type="text/css">
+* { margin: 0; padding: 0; }
+
+body {
+  left: 50%;
+  transform: translateX(-50%);
+}
+html, body {
+  position: fixed;
+  text-align: center;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+body, #gameCanvas {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#gameCanvas {
+  display: block;
+  background-color: #000000;
+  font-size: 16px;
+}
+
+div, table, td, p, canvas, img, body {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+</style>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '455254245688812');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=455254245688812&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8DQZWN7N0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H8DQZWN7N0');
+</script>
+</head>
+
+<body>
+<div style="text-align:center;">
+  <div id="title" style="margin: 0 auto; display: block; background:#000000; text-align:center;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border:0; padding:0; margin:auto; width:100%;" align="center">
+      <tr>
+        <td valign="middle">
+          <img src="rustyjazmotorfunk_100x120.png" id="rjmf" height="50" alt="RJMF Logo" />
+        </td>
+        <td valign="middle">
+          <span style="font-family:Bangers;color:#F00;font-size:20px;text-decoration:none;">Rusty Jaz MotorFunk Tennis</span>
+        </td>
+        <td valign="middle" style="text-align:right;">
+          <img src="music_on.png" id="btnPause" name="btnPause" onclick="PausePlay()" height="25" border="0" style="padding-right:10px; cursor:pointer;" alt="Audio Toggle" /> 
+          <a href="https://rustyjazmotorfunk.com">
+            <img src="exit-200.png" id="exit" name="exit" height="25" border="0" style="padding-right:10px;" alt="Quitter le jeu" />
+          </a>
+        </td>
+      </tr>
+    </table> 
+  </div>
+</div>
+
+<canvas id="gameCanvas"></canvas>
+
+<script type="text/javascript">
+
+// Function to detect standalone
+function isRunningStandalone() {
+    return (window.matchMedia('(display-mode: standalone)').matches);
+}
+
+//Set canvas to fullscreen
+if (isRunningStandalone()) {
+    var ch = window.innerHeight-70;
+} else {
+    var ch = window.innerHeight-60;
+}
+var cw = window.innerWidth;
+if(cw > ch) {
+  gameCanvas.height = ch;
+  gameCanvas.width = ch+60;
+  title.width = ch+60;
+} else {
+  gameCanvas.height = ch;
+  gameCanvas.width = cw;
+  title.width=cw;
+}
+
+// Canvas vars
+var canvas;
+var canvasContext;
+// Ball vars
+var ballX = 50;
+var ballY = 50;
+var ballSpeedX = 3;
+var ballSpeedY = 8;
+var ballSpeedPlus = 0;
+var ballRad = 25;
+var ballColor = "white";
+// Paddles vars
+var paddle1X = 250;
+var paddle2X = 250;
+var paddle_width = 100;
+
+if(gameCanvas.width < 400) {
+    paddle_width = ((gameCanvas.width)/4);
+}
+const paddle_thick = 10;
+// Score vars
+var player1Score = 0;
+var player2Score = 0;
+var player1Level = 0;
+var player2Level = 0;
+const winningScore = 10;
+var showWinner = true;
+// Colors vars
+var leftPlayerColor = "blue";
+var rightPlayerColor = "red";
+var bgColor = "black";
+var textColor = "white";
+// Font Style var
+var fontStyle = "30px Bangers";
+// Net Color var
+var netColor = "white";
+// Selecting the image as the Ball
+var img = document.getElementById("rjmf");
+// Setting for mute
+playBack = true;
+
+// Getting mouse position
+function mousePos(e) {
+  var rec = canvas.getBoundingClientRect();
+  var root = document.documentElement;
+  var mouseX = e.clientX - root.scrollLeft - rec.left;
+  var mouseY = e.clientY - root.scrollTop - rec.top;
+  return {
+    x: mouseX,
+    y: mouseY
+  };
+}
+
+// Enemy ( Bottom player ) movement
+function enemyMove() {
+  var paddle2Center = paddle2X + (paddle_width/2);
+  if(paddle2Center < ballX - 35) {
+    paddle2X += (10 + ballSpeedPlus);
+  } else if(paddle2Center > ballX + 35) {
+    paddle2X -= (10 + ballSpeedPlus);
+  }
+}
+
+// Launching the game when window is loaded
+window.onload = function() {
+  canvas = document.getElementById("gameCanvas");
+  canvasContext = canvas.getContext("2d");
+  
+  var framesPerSec = 30;
+  setInterval(function() {
+    moveEverything();
+    drawEverything();
+  }, 1000/framesPerSec);
+  
+  canvas.addEventListener("mousedown", restartGame);
+  
+  canvas.addEventListener("mousemove", function(e){
+    var calMousePos = mousePos(e);
+    paddle1X = calMousePos.x-(paddle_width/2);
+  });
+
+  canvas.addEventListener("touchmove", function (e) {
+    var touch = e.touches[0];
+    var mouseEvent = new MouseEvent("mousemove", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    canvas.dispatchEvent(mouseEvent);
+  }, false);
+  
+  canvas.addEventListener("touchstart", function(e) { 
+    var mouseEvent = new MouseEvent("mousedown", {});
+    canvas.dispatchEvent(mouseEvent);
+  });
+  
+  window.addEventListener("blur", PauseOnly);
+  window.addEventListener("focus", PlayOnly);
+}
+
+// Restarting the game function
+function restartGame() {
+  if(showWinner) {
+    player1Score = 0;
+    player2Score = 0;
+    showWinner = false;
+    if(playBack) { ChangeSong(); }
+  }
+}
+
+// Moving everything in canvas function
+function moveEverything() {
+  if(showWinner) {
+    return;
+  }
+  enemyMove();
+  ballX += ballSpeedX;
+  ballY += ballSpeedY;
+  
+  if(ballY > canvas.height - (paddle_thick + ballRad)){
+    if(ballX > paddle2X && ballX < paddle2X + paddle_width) {
+      ballSpeedY = -ballSpeedY;
+      var deltaX = ballX - (paddle2X+paddle_width/2);
+      ballSpeedX = deltaX * .35;
+     } else {
+       player1Score++;
+       ballReset();        
+     }
+  }
+  
+  if(ballY < (paddle_thick + ballRad)){
+    if(ballX > paddle1X && ballX < paddle1X + paddle_width) {
+      ballSpeedY = -ballSpeedY;
+      var deltaX = ballX - (paddle1X+paddle_width/2);
+      ballSpeedX = deltaX * .35;
+     } else {
+       player2Score++;
+       ballReset();        
+     }
+  }
+  
+  if(ballX > canvas.width){
+    ballSpeedX = -ballSpeedX;
+  }
+  if(ballX < 0){
+    ballSpeedX = -ballSpeedX;
+  }
+}
+
+function ballReset() {
+  if(player1Score >= winningScore || player2Score >= winningScore) {
+    showWinner = true;
+    ballSpeedPlus += 1;
+    ballSpeedX = ballSpeedX*1.2;
+    ballSpeedY = ballSpeedY*1.2;
+  }
+  ballSpeedY = -ballSpeedY;
+  ballX = canvas.width/2;
+  ballY = canvas.height/2;
+}
+
+// Draw everything in the canvas function
+function drawEverything() { 
+  colorRect(0,0,canvas.width,canvas.height,bgColor);
+  
+  if(showWinner) {
+    if(player1Score>= winningScore) {
+      if (player1Level+player2Level<ballSpeedPlus) {player1Level++;}
+      canvasContext.fillStyle = leftPlayerColor;
+      var text = "Vous avez gagné / You Win !";
+    } else if(player2Score>= winningScore) {
+      if (player1Level+player2Level<ballSpeedPlus) {player2Level++;}
+      canvasContext.fillStyle = rightPlayerColor;
+      var text = "RJMF a gagné / RJMF Win !";
+    } else {
+      canvasContext.fillStyle = leftPlayerColor;
+      var text = "Bienvenue ! / Welcome!";
+    }
+    
+    canvasContext.font = "25px Bangers";
+    var x = (canvasContext.measureText(text).width);
+    canvasContext.fillText(text,(canvas.width-x)/2, (canvas.height)/3);
+    canvasContext.fillStyle = textColor;
+    var text2 = "Cliquez pour continuer";
+    var x = (canvasContext.measureText(text2).width);
+    canvasContext.fillText(text2,(canvas.width-x)/2, (canvas.height)/3*2);
+    var text3 = "Click to continue";
+    var x = (canvasContext.measureText(text3).width);
+    canvasContext.fillText(text3,(canvas.width-x)/2, (canvas.height)*0.75);
+    
+    if (ballSpeedPlus>0) {
+        var text4 = "Level "+(ballSpeedPlus+1);
+        canvasContext.fillStyle = "#CCCCCC";
+        var x = (canvasContext.measureText(text4).width);
+        canvasContext.fillText(text4,(canvas.width-x)/2,(canvas.height)/2);
+        canvasContext.fillStyle = leftPlayerColor;
+        canvasContext.fillText(player1Level,(canvas.width-x)/2-50,(canvas.height)/2);
+        canvasContext.fillStyle = rightPlayerColor;
+        canvasContext.fillText(player2Level,(canvas.width-x)/2+x+40,(canvas.height)/2);
+    }
+    return;
+  }
+  
+  colorRect(paddle1X,0,paddle_width,paddle_thick,leftPlayerColor);
+  colorRect(paddle2X,canvas.height-paddle_thick,paddle_width,paddle_thick,rightPlayerColor);
+  colorCircle(ballX, ballY,ballRad,ballColor);
+  
+  canvasContext.font = fontStyle;
+  canvasContext.fillStyle = leftPlayerColor;
+  canvasContext.fillText(player1Score, 100, 100);
+  canvasContext.fillStyle = rightPlayerColor;
+  canvasContext.fillText(player2Score, canvas.width-100, canvas.height-100);
+}
+
+function colorCircle(centeX, centerY, radius, color) {
+  canvasContext.drawImage(img, centeX-20, centerY-28, 42, 50);
+}
+
+function colorRect(leftX, topY, width, height, color) {
+  canvasContext.fillStyle = color;
+  canvasContext.fillRect(leftX, topY, width, height);
+}
+
+// Load songs from Audius
+var fetchError = 'false';
+var audiusHost = 'https://discoveryprovider.audius.co';
+var track = 'VK909';
+var audiusSrc = '';
+var tr = '';
+
+async function getMusic() {
+    const sample = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    const host = await fetch('https://api.audius.co')
+    .then(r => r.json())
+    .then(j => j.data)
+    .then(d => sample(d));
+    audiusHost = host;
+    
+    await fetch(audiusHost+'/v1/users/aAZNj/tracks?app_name=RJMF')  
+    .then(function(response) { 
+        if(response.ok){
+            tr = response.json().data;
+        }
+        throw new Error('Something went wrong.');
+    })  
+    .catch(function(error) { 
+        fetchError = "true";
+        audiusHost = 'https://discoveryprovider.audius.co';
+    });
+    
+    const sample2 = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    tr = await fetch(audiusHost+'/v1/users/aAZNj/tracks?app_name=RJMF')
+    .then(r => r.json())
+    .then(j => j.data);
+    
+    track = sample2(tr).id;
+    
+    const audiusSrcF = await fetch(audiusHost+'/v1/tracks/'+track+'/stream?app_name=RJMF')
+    .then(r => r.url);
+    audiusSrc = audiusSrcF;
+    
+    src.src = audiusSrc;
+    src.id = audiusSrc;
+    soundFile.appendChild(src);
+}
+getMusic();
+
+soundFile = document.createElement("audio");
+soundFile.preload = "auto";
+
+src = document.createElement("source");
+src.src = audiusSrc;
+src.id = "audiusSrc";
+soundFile.appendChild(src);
+soundFile.load();
+
+function play() {
+    soundFile.currentTime = 0.01;
+    soundFile.volume = volume;
+    setTimeout(function(){soundFile.play();},1);
+}
+
+btn = document.getElementById("btnPause");
+
+function PausePlay() {
+    if (soundFile.paused) {
+        soundFile.play();
+        btn.src = "music_off.png";
+        playBack = true;
+    } else if (soundFile.ended) {
+        soundFile.currentTime = 0;
+        soundFile.play();
+        btn.src = "music_off.png";
+        playBack = true;
+    } else {
+        soundFile.pause();
+        btn.src = "music_on.png";
+        playBack = false;
+    }
+}
+
+function PlayOnly() {
+    if (soundFile.paused && playBack) {
+        soundFile.play();
+        btn.src = "music_off.png";
+    } else if (soundFile.ended && playBack) {
+        soundFile.currentTime = 0;
+        soundFile.play();
+        btn.src = "music_off.png";
+    }
+}
+
+function PauseOnly() {
+    soundFile.pause();
+    btn.src = "music_on.png";
+}
+
+async function ChangeSong() {
+    const sample2 = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    track = sample2(tr).id;
+    await fetch(audiusHost+'/v1/tracks/'+track+'/stream?app_name=RJMF')  
+    .then(function(response) { 
+        if(response.ok){
+            audiusSrc = response.url;
+            src.src = audiusSrc;
+            src.id = audiusSrc;
+            soundFile.appendChild(src);
+            soundFile.pause();
+            soundFile.load();
+        }
+    });
+    soundFile.play();
+    btn.src = "music_off.png";
+}
+
+</script>
+</body>
+</html>

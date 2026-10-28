@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://rustyjazmotorfunk.com/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Album Talkshow (2023) -->
+  <url>
+    <loc>https://rustyjazmotorfunk.com/talkshow/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- EP Confined Funk (2021) -->
+  <url>
+    <loc>https://rustyjazmotorfunk.com/cf/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- EP It is Impossible to Win, Game Over (2020) -->
+  <url>
+    <loc>https://rustyjazmotorfunk.com/iiitwgo/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Jeu Officiel / PWA -->
+  <url>
+    <loc>https://rustyjazmotorfunk.com/game/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

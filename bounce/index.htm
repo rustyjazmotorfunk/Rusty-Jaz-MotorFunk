@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Bouncing RJMF</title>
+</head>
+<style type="text/css">
+
+/*Simple reset*/
+* {margin: 0; padding: 0;}
+
+body,
+#canvas {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+#canvas {
+  display: block;
+}
+
+</style>
+
+
+<body>
+<canvas id="canvas"></canvas>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var imgTag = new Image();
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+var x = canvas.width;
+var y = 0;
+
+imgTag.onload = animate;
+imgTag.src = "https://rustyjazmotorfunk.com/images/rustyjazmotorfunk_100x143.jpg";
+
+
+
+var h = window.innerHeight;
+var w = window.innerWidth;
+
+canvas.height = h;
+canvas.width = w;
+
+
+//moving image
+var mover = {
+  x: 0,
+  y: 0,
+  width: 100,
+  height: 143,
+  color: '#000',
+  down: true,
+  right: true
+}
+
+function animate() {
+  clear();
+  render();
+  rID = requestAnimationFrame(animate);
+}
+
+function clear() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function render() {
+  //set direction
+  if (mover.down && mover.y >= h - mover.height)
+    mover.down = false;
+
+  if (!mover.down && mover.y <= 0)
+    mover.down = true;
+
+  if (mover.right && mover.x >= w - mover.width)
+    mover.right = false;
+
+  if (!mover.right && mover.x <= 0)
+    mover.right = true;
+
+  //make move
+  if (mover.right)
+    mover.x += 5;
+  else
+    mover.x -= 5;
+
+  if (mover.down)
+    mover.y += 5;
+  else
+    mover.y -= 5;
+
+  //drawRectangle(mover);
+  drawImage(mover);
+
+}
+
+function drawImage(mover) {
+  context.drawImage(imgTag, mover.x, mover.y); // draw image at current position
+}
+
+</script>
+</body>
+</html>

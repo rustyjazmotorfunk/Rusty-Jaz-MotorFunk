@@ -1,0 +1,17 @@
+{
+  "short_name": "RJMF Tennis",
+  "name": "Rusty Jaz MotorFunk Tennis",
+  "icons": [
+    {
+      "src": "https://rustyjazmotorfunk.com/android-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/game/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000",
+  "description": "Rusty Jaz MotorFunk Tennis le jeu !"
+}
